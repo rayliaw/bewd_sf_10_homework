@@ -1,0 +1,8 @@
+<%= simple_form_for [@artist, @song] do |f| %>
+  <%= f.input :name, label: false, input_html: {placeholder: "Name"} %>
+  <%= f.input :year, label: false, input_html: {placeholder: "Year"} %>
+  <%= f.input :length, label: false, input_html: {placeholder: "Length"} %>
+  <%= f.input :genre, label: false, input_html: {placeholder: "Genre"} %>
+  <%= f.submit 'Submit'.html_safe, class: 'btn btn-lg btn-primary' %>
+  <%= link_to 'Cancel', :back, class: 'btn btn-lg btn-default' %>
+<% end %>

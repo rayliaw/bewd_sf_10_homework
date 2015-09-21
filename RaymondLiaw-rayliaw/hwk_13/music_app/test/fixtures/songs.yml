@@ -16,14 +16,14 @@
 
 one:
   name: MyString
-  length: MyString
   genre: MyString
   year: 1
+  length: MyString
   artist_id: 
 
 two:
   name: MyString
-  length: MyString
   genre: MyString
   year: 1
+  length: MyString
   artist_id: 

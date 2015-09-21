@@ -1,0 +1,7 @@
+<%= simple_form_for @artist do |f| %>
+  <%= f.input :name, label: false, input_html: {placeholder: "Name"} %>
+  <%= f.input :description, label: false, as: :text, input_html: {placeholder: "Bio"} %>
+  <%= f.input :image_url, label: false, input_html: {placeholder: "Image URL"} %>
+  <%= f.submit 'Submit'.html_safe, class: 'btn btn-lg btn-primary' %>
+  <%= link_to 'Cancel', :back, class: 'btn btn-lg btn-default' %>
+<% end %>

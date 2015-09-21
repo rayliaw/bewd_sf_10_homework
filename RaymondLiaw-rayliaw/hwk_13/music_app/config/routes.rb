@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
-  resources :artists
+  resources :artists do
+    resources :songs do
+      resources :reviews
+    end
+    resources :reviews
+  end
 
   # Establish a custom route
   get 'about', to: 'static_pages#about', as: 'about'
