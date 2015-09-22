@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
   resources :artists do
-    resources :songs do
-      resources :reviews
-    end
+    resources :songs
+    resources :reviews
+  end
+
+  resources :songs do
     resources :reviews
   end
 

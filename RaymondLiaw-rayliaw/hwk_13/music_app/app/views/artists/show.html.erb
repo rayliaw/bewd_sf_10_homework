@@ -9,6 +9,7 @@
       </h2>
       <p>
         <%= @artist.description %>
+        <%= link_to 'Reviews', artist_review_path(@artist, @artist), class: 'btn btn-default btn-xs' %>
       </p>
     </div>
   </div>
@@ -42,8 +43,28 @@
   <div class="panel-footer">
     <%= link_to 'Back', artists_path, class: 'btn btn-default' %>
     <%= link_to 'Add Song', new_artist_song_path(@artist), class: 'btn btn-default' %>
-    <%= link_to 'Add Review', new_artist_song_path(@artist), class: 'btn btn-default' %>
+    <%= link_to 'Add Review', new_artist_review_path(@artist), class: 'btn btn-default' %>
     <%= link_to 'Edit', edit_artist_path(@artist), class: 'btn btn-primary' %>
     <%= link_to 'Delete', artist_path(@artist), method: :delete, data: {confirm: "Delete this artist?"}, class: 'btn btn-warning' %>
+  </div>
+
+  <h2>Reviews</h2>
+  <div class="table-responsive">
+    <table class="table table-hover">
+      <tr class="small">
+        <th>Rating</th>
+        <th>Review</th>
+        <th>Reviewer</th>
+      </tr>
+
+      <% @artist.reviews.each do |review| %>
+        <tr>
+          <td><%= review.reviewer %></td>
+          <td><%= review.rating %></td>
+          <td><%= review.review %></td>
+        </tr>
+      <% end %>
+
+    </table>
   </div>
 </div>

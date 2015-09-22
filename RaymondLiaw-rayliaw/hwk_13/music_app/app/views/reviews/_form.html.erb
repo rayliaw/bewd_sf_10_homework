@@ -1,5 +1,4 @@
-<% binding.pry %>
-<%= simple_form_for [@review.reviewable.song, @review] do |f| %>
+<%= simple_form_for [@reviewable_item, @review] do |f| %>
   <%= f.input :reviewer, label: false, input_html: {placeholder: "Name"} %>
   <%= f.input :rating, label: false, input_html: {placeholder: "Rating"} %>
   <%= f.input :review, label: false, as: :text, input_html: {placeholder: "Review"} %>
